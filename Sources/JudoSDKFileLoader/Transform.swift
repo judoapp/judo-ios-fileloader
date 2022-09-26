@@ -106,7 +106,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: carousel.ignoresSafeArea,
+                ignoresSafeArea: carousel.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: carousel.aspectRatio,
                 padding: carousel.padding?.transformToSDKFormat(),
                 frame: carousel.frame?.transformToSDKFormat(),
@@ -129,7 +129,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: scrollContainer.ignoresSafeArea,
+                ignoresSafeArea: scrollContainer.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: scrollContainer.aspectRatio,
                 padding: scrollContainer.padding?.transformToSDKFormat(),
                 frame: scrollContainer.frame?.transformToSDKFormat(),
@@ -143,7 +143,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 action: scrollContainer.action?.transformToSDKFormat(segue: scrollContainer.segue, pendingActionRelationships: &pendingActionRelationships),
                 accessibility: scrollContainer.accessibility?.transformToSDKFormat(),
                 metadata: scrollContainer.metadata?.transformToSDKFormat(),
-                axis: scrollContainer.axis,
+                axis: scrollContainer.axis.transformToSDKFormat(),
                 disableScrollBar: scrollContainer.disableScrollBar
             )
         case let spacer as JudoSDKFileLoaderModel.Spacer:
@@ -153,7 +153,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: spacer.ignoresSafeArea,
+                ignoresSafeArea: spacer.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: spacer.aspectRatio,
                 padding: spacer.padding?.transformToSDKFormat(),
                 frame: spacer.frame?.transformToSDKFormat(),
@@ -175,7 +175,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: pageControl.ignoresSafeArea,
+                ignoresSafeArea: pageControl.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: pageControl.aspectRatio,
                 padding: pageControl.padding?.transformToSDKFormat(),
                 frame: pageControl.frame?.transformToSDKFormat(),
@@ -208,7 +208,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: rectangle.ignoresSafeArea,
+                ignoresSafeArea: rectangle.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: rectangle.aspectRatio,
                 padding: rectangle.padding?.transformToSDKFormat(),
                 frame: rectangle.frame?.transformToSDKFormat(),
@@ -234,7 +234,7 @@ private extension JudoSDKFileLoaderModel.Node {
                     // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                     parent: nil,
                     children: children,
-                    ignoresSafeArea: image.ignoresSafeArea,
+                    ignoresSafeArea: image.ignoresSafeArea?.transformToSDKFormat(),
                     aspectRatio: image.aspectRatio,
                     padding: image.padding?.transformToSDKFormat(),
                     frame: image.frame?.transformToSDKFormat(),
@@ -266,7 +266,7 @@ private extension JudoSDKFileLoaderModel.Node {
                     // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                     parent: nil,
                     children: children,
-                    ignoresSafeArea: image.ignoresSafeArea,
+                    ignoresSafeArea: image.ignoresSafeArea?.transformToSDKFormat(),
                     aspectRatio: image.aspectRatio,
                     padding: image.padding?.transformToSDKFormat(),
                     frame: image.frame?.transformToSDKFormat(),
@@ -297,7 +297,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: icon.ignoresSafeArea,
+                ignoresSafeArea: icon.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: icon.aspectRatio,
                 padding: icon.padding?.transformToSDKFormat(),
                 frame: icon.frame?.transformToSDKFormat(),
@@ -322,7 +322,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: screen.ignoresSafeArea,
+                ignoresSafeArea: screen.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: screen.aspectRatio,
                 padding: screen.padding?.transformToSDKFormat(),
                 frame: screen.frame?.transformToSDKFormat(),
@@ -347,7 +347,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: navBar.ignoresSafeArea,
+                ignoresSafeArea: navBar.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: navBar.aspectRatio,
                 padding: navBar.padding?.transformToSDKFormat(),
                 frame: navBar.frame?.transformToSDKFormat(),
@@ -377,7 +377,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: navBarButton.ignoresSafeArea,
+                ignoresSafeArea: navBarButton.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: navBarButton.aspectRatio,
                 padding: navBarButton.padding?.transformToSDKFormat(),
                 frame: navBarButton.frame?.transformToSDKFormat(),
@@ -403,7 +403,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: zstack.ignoresSafeArea,
+                ignoresSafeArea: zstack.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: zstack.aspectRatio,
                 padding: zstack.padding?.transformToSDKFormat(),
                 frame: zstack.frame?.transformToSDKFormat(),
@@ -417,7 +417,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 action: zstack.action?.transformToSDKFormat(segue: zstack.segue, pendingActionRelationships: &pendingActionRelationships),
                 accessibility: zstack.accessibility?.transformToSDKFormat(),
                 metadata: zstack.metadata?.transformToSDKFormat(),
-                alignment: zstack.alignment
+                alignment: zstack.alignment.transformToSDKFormat()
             )
         case let hstack as JudoSDKFileLoaderModel.HStack:
             return JudoModel.HStack(
@@ -426,7 +426,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: hstack.ignoresSafeArea,
+                ignoresSafeArea: hstack.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: hstack.aspectRatio,
                 padding: hstack.padding?.transformToSDKFormat(),
                 frame: hstack.frame?.transformToSDKFormat(),
@@ -440,7 +440,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 action: hstack.action?.transformToSDKFormat(segue: hstack.segue, pendingActionRelationships: &pendingActionRelationships),
                 accessibility: hstack.accessibility?.transformToSDKFormat(),
                 metadata: hstack.metadata?.transformToSDKFormat(),
-                alignment: hstack.alignment,
+                alignment: hstack.alignment.transformToSDKFormat(),
                 spacing: hstack.spacing
             )
         case let vstack as JudoSDKFileLoaderModel.VStack:
@@ -450,7 +450,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: vstack.ignoresSafeArea,
+                ignoresSafeArea: vstack.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: vstack.aspectRatio,
                 padding: vstack.padding?.transformToSDKFormat(),
                 frame: vstack.frame?.transformToSDKFormat(),
@@ -464,7 +464,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 action: vstack.action?.transformToSDKFormat(segue: vstack.segue, pendingActionRelationships: &pendingActionRelationships),
                 accessibility: vstack.accessibility?.transformToSDKFormat(),
                 metadata: vstack.metadata?.transformToSDKFormat(),
-                alignment: vstack.alignment,
+                alignment: vstack.alignment.transformToSDKFormat(),
                 spacing: vstack.spacing
             )
         case let text as JudoSDKFileLoaderModel.Text:
@@ -474,7 +474,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: text.ignoresSafeArea,
+                ignoresSafeArea: text.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: text.aspectRatio,
                 padding: text.padding?.transformToSDKFormat(),
                 frame: text.frame?.transformToSDKFormat(),
@@ -491,7 +491,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 text: text.text,
                 font: text.font.transformToSDKFormat(documentState: documentState),
                 textColor: text.textColor.transformToSDKFormat(),
-                textAlignment: text.textAlignment,
+                textAlignment: text.textAlignment.transformToSDKFormat(),
                 lineLimit: text.lineLimit,
                 transform: text.transform?.transformToSDKFormat()
             )
@@ -502,7 +502,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: divider.ignoresSafeArea,
+                ignoresSafeArea: divider.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: divider.aspectRatio,
                 padding: divider.padding?.transformToSDKFormat(),
                 frame: divider.frame?.transformToSDKFormat(),
@@ -525,7 +525,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: webView.ignoresSafeArea,
+                ignoresSafeArea: webView.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: webView.aspectRatio,
                 padding: webView.padding?.transformToSDKFormat(),
                 frame: webView.frame?.transformToSDKFormat(),
@@ -549,7 +549,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: video.ignoresSafeArea,
+                ignoresSafeArea: video.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: video.aspectRatio,
                 padding: video.padding?.transformToSDKFormat(),
                 frame: video.frame?.transformToSDKFormat(),
@@ -578,7 +578,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 // parent will be set in the initializer of the parent that receives this node in the children array given to its initializer.
                 parent: nil,
                 children: children,
-                ignoresSafeArea: audio.ignoresSafeArea,
+                ignoresSafeArea: audio.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: audio.aspectRatio,
                 padding: audio.padding?.transformToSDKFormat(),
                 frame: audio.frame?.transformToSDKFormat(),
@@ -602,7 +602,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 name: dataSource.name,
                 parent: nil,
                 children: children,
-                ignoresSafeArea: dataSource.ignoresSafeArea,
+                ignoresSafeArea: dataSource.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: dataSource.aspectRatio,
                 padding: dataSource.padding?.transformToSDKFormat(),
                 frame: dataSource.frame?.transformToSDKFormat(),
@@ -628,7 +628,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 name: collection.name,
                 parent: nil,
                 children: children,
-                ignoresSafeArea: collection.ignoresSafeArea,
+                ignoresSafeArea: collection.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: collection.aspectRatio,
                 padding: collection.padding?.transformToSDKFormat(),
                 frame: collection.frame?.transformToSDKFormat(),
@@ -653,7 +653,7 @@ private extension JudoSDKFileLoaderModel.Node {
                 name: conditional.name,
                 parent: nil,
                 children: children,
-                ignoresSafeArea: conditional.ignoresSafeArea,
+                ignoresSafeArea: conditional.ignoresSafeArea?.transformToSDKFormat(),
                 aspectRatio: conditional.aspectRatio,
                 padding: conditional.padding?.transformToSDKFormat(),
                 frame: conditional.frame?.transformToSDKFormat(),
@@ -705,7 +705,7 @@ private extension JudoSDKFileLoaderModel.Font {
         case .custom(let fontName, let size):
             return .custom(fontName: fontName, size: size, isDynamic: false)
         case .dynamic(let textStyle, let emphases):
-            return .dynamic(textStyle: textStyle, emphases: emphases.transformToSDKFormat())
+            return .dynamic(textStyle: textStyle.transformToSDKFormat(), emphases: emphases.transformToSDKFormat())
         case .document(let fontFamily, let textStyle):
             guard let matchingDocumentFont = documentFonts.first(where: { font in
                 font.fontFamily == fontFamily
@@ -719,7 +719,7 @@ private extension JudoSDKFileLoaderModel.Font {
             
             return .custom(fontName: customFont.fontName, size: customFont.size, isDynamic: true)
         case .fixed(let size, let weight):
-            return .fixed(size: size, weight: weight)
+            return .fixed(size: size, weight: weight.transformToSDKFormat())
         }
     }
 }
@@ -1023,7 +1023,7 @@ private extension JudoSDKFileLoaderModel.Frame {
             maxWidth: maxWidth,
             minHeight: minHeight,
             maxHeight: maxHeight,
-            alignment: alignment
+            alignment: alignment.transformToSDKFormat()
         )
     }
 }
@@ -1191,7 +1191,7 @@ private extension JudoSDKFileLoaderModel.Background {
     func transformToSDKFormat(documentState: DocumentState, pendingActionRelationships: inout [PendingActionRelationship], pendingPageControlRelationships: inout [PendingPageControlRelationship]) -> JudoModel.Background? {
         JudoModel.Background(
             node.transformToSDKFormat(documentState: documentState, pendingActionRelationships: &pendingActionRelationships, pendingPageControlRelationships: &pendingPageControlRelationships)!,
-            alignment: alignment
+            alignment: alignment.transformToSDKFormat()
         )
     }
 }
@@ -1200,7 +1200,7 @@ private extension JudoSDKFileLoaderModel.Overlay {
     func transformToSDKFormat(documentState: DocumentState, pendingActionRelationships: inout [PendingActionRelationship], pendingPageControlRelationships: inout [PendingPageControlRelationship]) -> JudoModel.Overlay? {
         JudoModel.Overlay(
             node.transformToSDKFormat(documentState: documentState, pendingActionRelationships: &pendingActionRelationships, pendingPageControlRelationships: &pendingPageControlRelationships)!,
-            alignment: alignment
+            alignment: alignment.transformToSDKFormat()
         )
     }
 
@@ -1246,6 +1246,177 @@ extension Sequence where Element: JudoModel.Node {
     func flatten() -> [JudoModel.Node] {
         flatMap { node -> [JudoModel.Node] in
             [node] + node.children.flatten()
+        }
+    }
+}
+
+private extension SwiftUI.Axis {
+    func transformToSDKFormat() -> JudoModel.Axis {
+        switch self {
+        case .horizontal:
+            return .horizontal
+        case .vertical:
+            return .vertical
+        }
+    }
+}
+
+private extension SwiftUI.TextAlignment {
+    func transformToSDKFormat() -> JudoModel.TextAlignment {
+        switch self {
+        case .center:
+            return .center
+        case .leading:
+            return .leading
+        case .trailing:
+            return .trailing
+        }
+    }
+}
+
+private extension SwiftUI.HorizontalAlignment {
+    func transformToSDKFormat() -> JudoModel.HorizontalAlignment {
+        switch self {
+        case .leading:
+            return .leading
+        case .center:
+            return .center
+        case .trailing:
+            return .trailing
+        default:
+            assertionFailure("Unsupported alignment: \(self)")
+            return .center
+        }
+    }
+}
+
+private extension SwiftUI.VerticalAlignment {
+    func transformToSDKFormat() -> JudoModel.VerticalAlignment {
+        switch self {
+        case .bottom:
+            return .bottom
+        case .center:
+            return .center
+        case .firstTextBaseline:
+            return .firstTextBaseline
+        case .top:
+            return .top
+        default:
+            assertionFailure("Unsupported alignment: \(self)")
+            return .center
+        }
+    }
+}
+
+private extension SwiftUI.Alignment {
+    func transformToSDKFormat() -> JudoModel.Alignment {
+        switch self {
+        case .bottom:
+            return .bottom
+        case .bottomLeading:
+            return .bottomLeading
+        case .bottomTrailing:
+            return .bottomTrailing
+        case .center:
+            return .center
+        case .leading:
+            return .leading
+        case .top:
+            return .top
+        case .topLeading:
+            return .topLeading
+        case .topTrailing:
+            return .topTrailing
+        case .trailing:
+            return .trailing
+        default:
+            assertionFailure("Unsupported alignment: \(self)")
+            return .center
+        }
+    }
+}
+
+private extension SwiftUI.Edge {
+    func transformToSDKFormat() -> JudoModel.Edge {
+        switch self {
+        case .top:
+            return .top
+        case .bottom:
+            return .bottom
+        case .leading:
+            return .leading
+        case .trailing:
+            return .trailing
+        }
+    }
+}
+
+private extension Set where Element == SwiftUI.Edge {
+    func transformToSDKFormat() -> Set<JudoModel.Edge> {
+        Swift.Set(
+            map {
+                $0.transformToSDKFormat()
+            }
+        )
+    }
+}
+
+private extension SwiftUI.Font.TextStyle {
+    func transformToSDKFormat() -> JudoModel.FontTextStyle {
+        switch self {
+        case .largeTitle:
+            return .largeTitle
+        case .title:
+            return .title
+        case .title2:
+            return .title2
+        case .title3:
+            return .title3
+        case .headline:
+            return .headline
+        case .body:
+            return .body
+        case .callout:
+            return .callout
+        case .subheadline:
+            return .subheadline
+        case .footnote:
+            return .footnote
+        case .caption:
+            return .caption
+        case .caption2:
+            return .caption2
+        @unknown default:
+            assertionFailure("Unsupported text style: \(self)")
+            return .body
+        }
+    }
+}
+
+private extension SwiftUI.Font.Weight {
+    func transformToSDKFormat() -> JudoModel.FontWeight {
+        switch self {
+        case .ultraLight:
+            return .ultraLight
+        case .thin:
+            return .thin
+        case .light:
+            return .light
+        case .regular:
+            return .regular
+        case .medium:
+            return .medium
+        case .semibold:
+            return .semibold
+        case .bold:
+            return .bold
+        case .heavy:
+            return .heavy
+        case .black:
+            return .black
+        default:
+            assertionFailure("Unsupported font weight: \(self)")
+            return .regular
         }
     }
 }
